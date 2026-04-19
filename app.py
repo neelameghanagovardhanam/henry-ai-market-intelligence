@@ -5,11 +5,17 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
 from dotenv import load_dotenv
+import streamlit as st
 import os
 from openai import OpenAI
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), ".env"), override=True)
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Get API key safely (works locally + Streamlit Cloud)
+api_key = os.getenv("OPENAI_API_KEY")
+
+if api_key is None:
+    api_key = st.secrets["OPENAI_API_KEY"]
+
+client = OpenAI(api_key=api_key)
 
 def ai_call(system_msg, user_msg):
     try:
