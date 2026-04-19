@@ -48,8 +48,7 @@ Find **"financially promising but underserved markets"** for financial advisory 
 
 ## App Deployment URL
 
-[Add your deployed Streamlit app link here]
-
+https://henry-ai-market-intelligence.streamlit.app/
 ---
 
 ## Local Setup Instructions
