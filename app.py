@@ -368,8 +368,8 @@ def create_tooltip(text, tooltip_key):
 @st.cache_data
 def load_data():
     try:
-        df21 = pd.read_csv('21zpallagi.csv')
-        df22 = pd.read_csv('22zpallagi.csv')
+        df21 = pd.read_csv('data/21zpallagi.csv')
+        df22 = pd.read_csv('data/22zpallagi.csv')
         
         df21['zipcode'] = df21['zipcode'].astype(str).str.zfill(5)
         df22['zipcode'] = df22['zipcode'].astype(str).str.zfill(5)

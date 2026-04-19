@@ -45,36 +45,6 @@ Find **"financially promising but underserved markets"** for financial advisory 
 - No Python package exists for this dataset
 - Data is provided in Excel/CSV format
 
----
-
-## 📥 Dataset Setup Instructions
-
-This project does NOT include raw datasets due to size constraints.
-
-### Step 1: Download Dataset
-Download IRS ZIP code tax data manually from the official IRS link above.
-
----
-
-### Step 2: Create Project Folder Structure
-
-Inside the project root:
-henry-ai-market-intelligence/
-│
-├── app.py
-├── utils/
-├── requirements.txt
-└── README.md
-
-
----
-
-### Step 3: Place Dataset Files
-
-After downloading, place files inside `/data`:
-henry-ai-market-intelligence/21zpallagi.csv
-henry-ai-market-intelligence/22zpallagi.csv
-
 
 ## App Deployment URL
 
@@ -87,7 +57,7 @@ henry-ai-market-intelligence/22zpallagi.csv
 ### Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/henry-ai-market-intelligence.git
+git clone https://github.com/neelameghanagovardhanam/henry-ai-market-intelligence
 cd henry-ai-market-intelligence
 ```
 
