@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 import streamlit as st
 import os
 from openai import OpenAI
+from pathlib import Path
 
 # Get API key safely (works locally + Streamlit Cloud)
 api_key = os.getenv("OPENAI_API_KEY")
@@ -368,8 +369,11 @@ def create_tooltip(text, tooltip_key):
 @st.cache_data
 def load_data():
     try:
-        df21 = pd.read_csv('data/21zpallagi.csv')
-        df22 = pd.read_csv('data/22zpallagi.csv')
+        BASE_DIR = Path(__file__).resolve().parent
+        data_path = BASE_DIR / "data"
+
+        df21 = pd.read_csv(data_path / "21zpallagi.csv")
+        df22 = pd.read_csv(data_path / "22zpallagi.csv")
         
         df21['zipcode'] = df21['zipcode'].astype(str).str.zfill(5)
         df22['zipcode'] = df22['zipcode'].astype(str).str.zfill(5)
